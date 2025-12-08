@@ -25,5 +25,7 @@ waiter.until(
 images = driver.find_elements(By.CSS_SELECTOR, "#image-container img")
 
 third_img = images[2]
+
 print(third_img.get_attribute("src"))
+
 quit()

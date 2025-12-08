@@ -13,6 +13,7 @@ driver.find_element(By.ID, 'newButtonName').send_keys('SkyPro')
 driver.find_element(By.CSS_SELECTOR, '#updatingButton').click()
 
 output_text = driver.find_element(By.CSS_SELECTOR, '#updatingButton').text
+
 print(output_text)
 
 quit()

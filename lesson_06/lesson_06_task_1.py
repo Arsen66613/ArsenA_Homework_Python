@@ -1,4 +1,3 @@
-from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -33,5 +32,4 @@ third_img_src = images[2].get_attribute("src")
 
 print(third_img_src)
 
-
-sleep(1)
+quit()
