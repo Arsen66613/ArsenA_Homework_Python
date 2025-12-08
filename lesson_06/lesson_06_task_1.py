@@ -7,7 +7,6 @@ driver = webdriver.Chrome(
     service=ChromeService(ChromeDriverManager().install())
     )
 
-# Задание 1
 driver.implicitly_wait(17)
 
 driver.get("http://uitestingplayground.com/ajax")
@@ -18,18 +17,4 @@ content = driver.find_element(By.CSS_SELECTOR, '#content')
 txt = content.find_element(By.CSS_SELECTOR, 'p.bg-success').text
 print(txt)
 
-quit()
-
-# Задание 3
-driver.get(
-    "https://bonigarcia.dev/selenium-webdriver-java/loading-images.html"
-    )
-driver.implicitly_wait(20)
-
-images = driver.find_elements(By.TAG_NAME, "img")
-
-third_img_src = images[2].get_attribute("src")
-
-print(third_img_src)
-
-quit()
+driver.quit()

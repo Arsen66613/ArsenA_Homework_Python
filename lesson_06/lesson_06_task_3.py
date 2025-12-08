@@ -28,4 +28,4 @@ third_img = images[2]
 
 print(third_img.get_attribute("src"))
 
-quit()
+driver.quit()
