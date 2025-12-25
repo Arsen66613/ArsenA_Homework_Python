@@ -1,15 +1,11 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
+import pytest
 from CalculatorPage import CalculatorPage
 
 
-def test_calculator():
-    browser = webdriver.Chrome(
-        service=ChromeService(ChromeDriverManager().install())
-        )
+@pytest.mark.chrome
+def test_calculator(driver):
+    calculator = CalculatorPage(driver)
 
-    calculator = CalculatorPage(browser)
     calculator.delay('45')
 
     calculator.click()
@@ -18,4 +14,4 @@ def test_calculator():
 
     assert screen == '15'
 
-    browser.quit()
+    driver.quit()

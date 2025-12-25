@@ -1,9 +1,11 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class ShopPage():
     def __init__(self, driver):
         self._driver = driver
+        self._wait = WebDriverWait(driver, 10)
         self._driver.get('https://www.saucedemo.com/')
 
     def authorization_username(self, term):
